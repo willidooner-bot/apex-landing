@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Apex Agency — Influencer Marketing & Creator Management | Napoli</title>
+<meta name="description" content="Apex Agency è un'agenzia premium di Influencer Marketing e Creator Management. 8+ anni di esperienza, 500+ campagne, 5.000+ creator. Dal 2018, Napoli."/>
+<meta property="og:title" content="Apex Agency — Il vertice si conquista."/>
+<meta property="og:description" content="Influencer Marketing e Creator Management per brand che puntano in alto. Eccellenza come metodo."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://apexx-agency.com"/>
+<meta property="og:image" content="https://apexx-agency.com/og-image.jpg"/>
+<meta name="theme-color" content="#050505"/>
+<link rel="canonical" href="https://apexx-agency.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#050505;
+  --bg-card:#0e0e0e;
+  --gold:#D4A843;
+  --gold-dim:rgba(212,168,67,0.3);
+  --gold-border:rgba(212,168,67,0.15);
+  --gold-glow:rgba(212,168,67,0.06);
+  --text:#f0ede8;
+  --text-muted:rgba(240,237,232,0.45);
+  --grad-gold:linear-gradient(to right,#D4A843,rgba(212,168,67,0.3));
+  --font-display:'Playfair Display',serif;
+  --font-body:'DM Sans',sans-serif;
+}
+
+html{scroll-behavior:smooth;font-size:16px}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-weight:300;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+::-webkit-scrollbar-thumb:hover{background:#c49630}
+
+/* ── UTILITIES ── */
+.eyebrow{
+  font-family:var(--font-body);
+  font-weight:500;
+  font-size:0.72rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.2rem;
+}
+
+.deco-line{
+  width:80px;
+  height:2px;
+  background:var(--grad-gold);
+  margin-bottom:1.4rem;
+}
+
+.display-title{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(2.4rem,4.5vw,4rem);
+  line-height:1.1;
+  color:var(--text);
+  letter-spacing:-0.02em;
+}
+
+.display-title em{
+  font-style:italic;
+  color:var(--gold);
+}
+
+.section-sub{
+  font-size:1rem;
+  color:var(--text-muted);
+  max-width:560px;
+  line-height:1.7;
+  margin-top:1.2rem;
+}
+
+.gold-dot{
+  width:8px;
+  height:8px;
+  background:var(--gold);
+  flex-shrink:0;
+}
+
+.btn-gold{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  background:var(--gold);
+  color:#050505;
+  font-family:var(--font-body);
+  font-weight:500;
+  font-size:0.9rem;
+  letter-spacing:0.04em;
+  padding:0.85rem 1.8rem;
+  border:none;
+  cursor:pointer;
+  transition:opacity 0.2s,transform 0.2s;
+  text-decoration:none;
+}
+.btn-gold:hover{opacity:0.88;transform:translateY(-1px)}
+
+.btn-ghost{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  background:transparent;
+  color:var(--gold);
+  font-family:var(--font-body);
+  font-weight:500;
+  font-size:0.9rem;
+  letter-spacing:0.04em;
+  padding:0.82rem 1.75rem;
+  border:1px solid var(--gold);
+  cursor:pointer;
+  transition:background 0.25s,color 0.25s,transform 0.2s;
+  text-decoration:none;
+}
+.btn-ghost:hover{background:var(--gold);color:#050505;transform:translateY(-1px)}
+
+.arrow{display:inline-block;margin-left:4px;transition:transform 0.2s}
+a:hover .arrow, button:hover .arrow{transform:translateX(4px)}
+
+/* ── REVEAL ── */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity 0.7s ease,transform 0.7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.1s}
+.reveal-d2{transition-delay:0.2s}
+.reveal-d3{transition-delay:0.3s}
+.reveal-d4{transition-delay:0.4s}
+.reveal-d5{transition-delay:0.5s}
+
+/* ── NAVBAR ── */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1.4rem 4rem;
+  transition:background 0.35s,border-color 0.35s,backdrop-filter 0.35s;
+  border-bottom:1px solid transparent;
+}
+nav.scrolled{
+  background:rgba(5,5,5,0.88);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom-color:rgba(212,168,67,0.2);
+}
+
+.nav-logo{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.3rem;
+  color:var(--gold);
+  text-decoration:none;
+  letter-spacing:0.02em;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:2.2rem;
+  list-style:none;
+}
+.nav-links a{
+  font-family:var(--font-body);
+  font-size:0.85rem;
+  font-weight:400;
+  letter-spacing:0.06em;
+  color:var(--text-muted);
+  text-decoration:none;
+  transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--text)}
+.nav-links .nav-cta{
+  color:var(--gold);
+  border:1px solid var(--gold-border);
+  padding:0.5rem 1.2rem;
+  border-radius:40px;
+  transition:background 0.25s,color 0.25s,border-color 0.25s;
+}
+.nav-links .nav-cta:hover{background:var(--gold);color:#050505;border-color:var(--gold)}
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  background:none;
+  border:none;
+  padding:4px;
+}
+.hamburger span{
+  display:block;
+  width:24px;
+  height:1.5px;
+  background:var(--gold);
+  transition:transform 0.3s,opacity 0.3s;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(5,5,5,0.98);
+  z-index:999;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2rem;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  font-family:var(--font-display);
+  font-size:2rem;
+  font-weight:700;
+  color:var(--gold);
+  text-decoration:none;
+  letter-spacing:0.02em;
+  transition:opacity 0.2s;
+}
+.mobile-menu a:hover{opacity:0.7}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:8rem 4rem 5rem;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-glow{
+  position:absolute;
+  top:50%;left:40%;
+  transform:translate(-50%,-50%);
+  width:900px;height:900px;
+  background:radial-gradient(circle,rgba(212,168,67,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:620px;
+}
+
+.hero-title{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(3.5rem,7vw,6.5rem);
+  line-height:1.0;
+  letter-spacing:-0.03em;
+  color:var(--text);
+  margin-bottom:1.6rem;
+}
+.hero-title em{
+  font-style:italic;
+  color:var(--gold);
+}
+
+.hero-sub{
+  font-size:1.05rem;
+  color:var(--text-muted);
+  max-width:480px;
+  line-height:1.75;
+  margin-bottom:2.4rem;
+}
+
+.hero-ctas{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.hero-visual{
+  position:absolute;
+  right:6rem;
+  top:50%;
+  transform:translateY(-50%);
+  opacity:0;
+  animation:heroFadeIn 1.2s ease 0.4s forwards;
+}
+
+@keyframes heroFadeIn{
+  from{opacity:0;transform:translateY(-50%) scale(0.9)}
+  to{opacity:1;transform:translateY(-50%) scale(1)}
+}
+
+.hero-logo-svg{
+  width:320px;
+  height:320px;
+}
+
+.hero-bottom{
+  position:absolute;
+  bottom:2.5rem;
+  left:4rem;right:4rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+
+.hero-domain{
+  font-family:var(--font-body);
+  font-size:0.8rem;
+  font-weight:400;
+  letter-spacing:0.1em;
+  color:var(--text-muted);
+  border:1px solid var(--gold-border);
+  padding:0.5rem 0.9rem;
+}
+
+.hero-year{
+  font-family:var(--font-body);
+  font-size:0.8rem;
+  font-weight:500;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+}
+
+/* ── STATS ── */
+#stats{
+  padding:5rem 4rem;
+  position:relative;
+}
+
+.stats-glow{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:700px;height:400px;
+  background:radial-gradient(circle,rgba(212,168,67,0.05) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border:1px solid var(--gold-border);
+  position:relative;
+  z-index:1;
+}
+
+.stat-item{
+  padding:2.5rem 2rem;
+  border-left:3px solid transparent;
+  border-image:linear-gradient(to bottom,#D4A843,rgba(212,168,67,0.2)) 1;
+  border-right:1px solid var(--gold-border);
+  transition:background 0.3s;
+}
+.stat-item:last-child{border-right:none}
+.stat-item:hover{background:rgba(212,168,67,0.03)}
+
+.stat-number{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(2.8rem,4vw,3.5rem);
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:0.5rem;
+  letter-spacing:-0.02em;
+}
+
+.stat-label{
+  font-size:0.82rem;
+  font-weight:400;
+  color:var(--text-muted);
+  letter-spacing:0.04em;
+  line-height:1.5;
+}
+
+/* ── CHI SIAMO ── */
+#chi-siamo{
+  padding:7rem 4rem;
+  position:relative;
+}
+
+.chi-glow{
+  position:absolute;
+  top:0;right:0;
+  width:600px;height:600px;
+  background:radial-gradient(circle,var(--gold-glow) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.chi-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6rem;
+  align-items:start;
+  position:relative;
+  z-index:1;
+}
+
+.chi-text p{
+  font-size:1rem;
+  color:var(--text-muted);
+  line-height:1.8;
+  margin-top:1.2rem;
+}
+
+.chi-values{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+.value-item{
+  display:flex;
+  gap:1.2rem;
+  align-items:flex-start;
+}
+
+.value-line{
+  width:3px;
+  min-height:80px;
+  background:var(--grad-gold);
+  flex-shrink:0;
+  margin-top:4px;
+}
+
+.value-content h4{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.05rem;
+  color:var(--text);
+  margin-bottom:0.5rem;
+}
+.value-content p{
+  font-size:0.9rem;
+  color:var(--text-muted);
+  line-height:1.65;
+}
+
+.chi-stats-bar{
+  margin-top:4rem;
+  grid-column:1/-1;
+  display:flex;
+  border-top:1px solid var(--gold-border);
+}
+
+.chi-stat{
+  flex:1;
+  padding:1.8rem 0 0;
+  border-right:1px solid var(--gold-border);
+  text-align:center;
+}
+.chi-stat:last-child{border-right:none}
+
+.chi-stat-num{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:2rem;
+  color:var(--gold);
+  display:block;
+}
+.chi-stat-label{
+  font-size:0.75rem;
+  font-weight:500;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  display:block;
+  margin-top:0.3rem;
+}
+
+/* ── STRUTTURA ── */
+#struttura{
+  padding:7rem 4rem;
+  background:linear-gradient(180deg,transparent,rgba(212,168,67,0.02) 50%,transparent);
+}
+
+.struttura-header{
+  text-align:center;
+  margin-bottom:4rem;
+}
+.struttura-header .section-sub{
+  margin:1.2rem auto 0;
+}
+
+.reparti-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border:1px solid var(--gold-border);
+}
+
+.reparto-card{
+  padding:2.4rem 2rem;
+  border-right:1px solid var(--gold-border);
+  border-bottom:1px solid var(--gold-border);
+  position:relative;
+  overflow:hidden;
+  transition:background 0.3s;
+}
+.reparto-card:hover{background:rgba(212,168,67,0.03)}
+.reparto-card:nth-child(3n){border-right:none}
+.reparto-card:nth-child(4),.reparto-card:nth-child(5),.reparto-card:nth-child(6){border-bottom:none}
+
+.reparto-dot{
+  position:absolute;
+  top:1.2rem;right:1.2rem;
+  width:8px;height:8px;
+  background:var(--gold);
+}
+
+.reparto-label{
+  font-family:var(--font-body);
+  font-size:0.7rem;
+  font-weight:500;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:1rem;
+  font-family:monospace;
+}
+
+.reparto-num{
+  font-family:var(--font-display);
+  font-size:0.8rem;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:0.05em;
+  margin-bottom:0.3rem;
+}
+
+.reparto-title{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.25rem;
+  color:var(--text);
+  margin-bottom:0.6rem;
+}
+
+.reparto-desc{
+  font-size:0.88rem;
+  color:var(--text-muted);
+  line-height:1.65;
+}
+
+/* ── SERVIZI ── */
+#servizi{
+  padding:7rem 4rem;
+  position:relative;
+}
+
+.servizi-glow{
+  position:absolute;
+  bottom:0;left:50%;
+  transform:translateX(-50%);
+  width:800px;height:500px;
+  background:radial-gradient(circle,var(--gold-glow) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.servizi-header{
+  margin-bottom:4rem;
+}
+
+.servizi-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+
+.servizio-card{
+  background:var(--bg-card);
+  border:1px solid var(--gold-border);
+  padding:2.4rem 2rem;
+  position:relative;
+  overflow:hidden;
+  transition:border-color 0.3s,background 0.3s;
+  cursor:default;
+}
+.servizio-card:hover{
+  border-color:rgba(212,168,67,0.4);
+  background:rgba(212,168,67,0.02);
+}
+
+.servizio-arrow{
+  position:absolute;
+  bottom:1.5rem;right:1.5rem;
+  color:var(--gold);
+  font-size:1.1rem;
+  transition:transform 0.25s;
+}
+.servizio-card:hover .servizio-arrow{transform:translate(4px,-4px)}
+
+.servizio-title{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.1rem;
+  color:var(--text);
+  margin-bottom:0.8rem;
+  padding-right:2rem;
+  line-height:1.3;
+}
+
+.servizio-desc{
+  font-size:0.87rem;
+  color:var(--text-muted);
+  line-height:1.7;
+}
+
+/* ── PROCESSO ── */
+#processo{
+  padding:7rem 4rem;
+  background:linear-gradient(180deg,transparent,rgba(212,168,67,0.025) 50%,transparent);
+}
+
+.processo-header{
+  margin-bottom:4.5rem;
+}
+
+.steps-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border:1px solid var(--gold-border);
+  margin-bottom:3rem;
+}
+
+.step-item{
+  padding:3rem 2rem 2.5rem;
+  border-right:1px solid var(--gold-border);
+  position:relative;
+  transition:background 0.3s;
+}
+.step-item:last-child{border-right:none}
+.step-item:hover{background:rgba(212,168,67,0.025)}
+
+.step-arrow{
+  position:absolute;
+  bottom:1.5rem;right:1.5rem;
+  color:var(--gold);
+  font-size:0.9rem;
+  opacity:0.6;
+}
+
+.step-number{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(3.5rem,5vw,4.5rem);
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:1rem;
+  letter-spacing:-0.03em;
+  opacity:0.9;
+}
+
+.step-title{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.05rem;
+  color:var(--text);
+  margin-bottom:0.6rem;
+}
+
+.step-desc{
+  font-size:0.87rem;
+  color:var(--text-muted);
+  line-height:1.65;
+}
+
+.processo-footer{
+  border-top:1px solid var(--gold-border);
+  padding-top:1.8rem;
+  text-align:center;
+}
+.processo-footer span{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.1rem;
+  color:var(--text-muted);
+}
+.processo-footer span em{
+  color:var(--gold);
+  font-style:italic;
+}
+
+/* ── PER CHI ── */
+#per-chi{
+  padding:7rem 4rem;
+}
+
+.perchi-header{margin-bottom:4rem}
+
+.perchi-featured{
+  background:var(--gold);
+  padding:3rem;
+  margin-bottom:1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:2rem;
+}
+.perchi-featured-left h3{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(1.8rem,3vw,2.2rem);
+  color:#050505;
+  margin-bottom:0.6rem;
+}
+.perchi-featured-left p{
+  font-size:0.95rem;
+  color:rgba(5,5,5,0.7);
+  max-width:480px;
+  line-height:1.6;
+}
+.perchi-featured-badge{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:0.7rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:#050505;
+  border:1.5px solid rgba(5,5,5,0.3);
+  padding:0.5rem 1rem;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+
+.perchi-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+
+.perchi-card{
+  background:var(--bg-card);
+  border:1px solid var(--gold-border);
+  border-top:3px solid var(--gold);
+  padding:2rem;
+  transition:background 0.3s;
+}
+.perchi-card:hover{background:rgba(212,168,67,0.02)}
+
+.perchi-card h4{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.1rem;
+  color:var(--text);
+  margin-bottom:0.6rem;
+}
+.perchi-card p{
+  font-size:0.88rem;
+  color:var(--text-muted);
+  line-height:1.65;
+}
+
+/* ── TESTIMONIANZE ── */
+#testimonianze{
+  padding:7rem 4rem;
+  background:linear-gradient(180deg,transparent,rgba(212,168,67,0.025) 50%,transparent);
+}
+
+.testi-header{margin-bottom:4rem}
+
+.testi-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+
+.testi-card{
+  background:var(--bg-card);
+  border:1px solid var(--gold-border);
+  padding:2.4rem 2rem;
+  position:relative;
+  transition:border-color 0.3s;
+}
+.testi-card:hover{border-color:rgba(212,168,67,0.35)}
+
+.testi-stars{
+  color:var(--gold);
+  font-size:1rem;
+  letter-spacing:2px;
+  margin-bottom:1.2rem;
+}
+
+.testi-quote{
+  font-size:0.95rem;
+  color:var(--text-muted);
+  line-height:1.75;
+  margin-bottom:1.6rem;
+  font-style:italic;
+}
+.testi-quote::before{content:'\201C';color:var(--gold);font-size:1.5rem;font-family:var(--font-display);line-height:0;vertical-align:-0.4em;margin-right:4px}
+
+.testi-author{
+  border-top:1px solid var(--gold-border);
+  padding-top:1rem;
+}
+.testi-name{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1rem;
+  color:var(--text);
+}
+.testi-role{
+  font-size:0.78rem;
+  color:var(--text-muted);
+  letter-spacing:0.05em;
+  margin-top:0.15rem;
+}
+
+/* ── FAQ ── */
+#faq{
+  padding:7rem 4rem;
+}
+
+.faq-header{margin-bottom:4rem}
+
+.faq-list{
+  max-width:800px;
+}
+
+.faq-item{
+  border-bottom:1px solid var(--gold-border);
+}
+
+.faq-trigger{
+  width:100%;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:1.6rem 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  text-align:left;
+}
+
+.faq-question{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.05rem;
+  color:var(--text);
+  line-height:1.3;
+  transition:color 0.2s;
+}
+.faq-trigger:hover .faq-question{color:var(--gold)}
+.faq-item.open .faq-question{color:var(--gold)}
+
+.faq-icon{
+  width:22px;
+  height:22px;
+  border:1px solid var(--gold-border);
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background 0.2s,border-color 0.2s;
+}
+.faq-item.open .faq-icon{background:var(--gold);border-color:var(--gold)}
+
+.faq-icon-bar{
+  position:relative;
+  width:10px;
+  height:10px;
+}
+.faq-icon-bar::before,.faq-icon-bar::after{
+  content:'';
+  position:absolute;
+  background:var(--gold);
+  transition:transform 0.3s,opacity 0.3s;
+}
+.faq-icon-bar::before{
+  width:10px;height:1.5px;
+  top:50%;left:0;
+  transform:translateY(-50%);
+}
+.faq-icon-bar::after{
+  width:1.5px;height:10px;
+  left:50%;top:0;
+  transform:translateX(-50%);
+}
+.faq-item.open .faq-icon-bar::before{background:#050505}
+.faq-item.open .faq-icon-bar::after{background:#050505;transform:translateX(-50%) rotate(90deg);opacity:0}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+}
+.faq-answer-inner{
+  padding-bottom:1.6rem;
+  font-size:0.92rem;
+  color:var(--text-muted);
+  line-height:1.75;
+}
+
+/* ── CONTATTI ── */
+#contatti{
+  padding:7rem 4rem;
+  background:linear-gradient(180deg,transparent,rgba(212,168,67,0.03) 50%,transparent);
+  position:relative;
+}
+
+.contatti-glow{
+  position:absolute;
+  top:50%;left:30%;
+  transform:translate(-50%,-50%);
+  width:700px;height:700px;
+  background:radial-gradient(circle,var(--gold-glow) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.contatti-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6rem;
+  align-items:start;
+  position:relative;
+  z-index:1;
+}
+
+.contatti-left .display-title{
+  font-size:clamp(3rem,5vw,4.5rem);
+}
+
+.contatti-info{
+  margin-top:2.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem;
+}
+.contatti-detail{
+  font-size:0.9rem;
+  color:var(--text-muted);
+}
+.contatti-detail a{
+  color:var(--gold);
+  text-decoration:none;
+  transition:opacity 0.2s;
+}
+.contatti-detail a:hover{opacity:0.75}
+
+.contatti-cta-wrap{
+  margin-top:2.2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+.contatti-cta-sub{
+  font-size:0.85rem;
+  color:var(--text-muted);
+}
+.contatti-cta-sub a{
+  color:var(--gold);
+  text-decoration:none;
+}
+
+/* FORM */
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:1.2rem;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.2rem;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:0.45rem;
+}
+
+.form-label{
+  font-size:0.75rem;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+}
+
+.form-input,.form-select,.form-textarea{
+  background:rgba(212,168,67,0.04);
+  border:1px solid var(--gold-border);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:0.92rem;
+  font-weight:300;
+  padding:0.9rem 1rem;
+  outline:none;
+  transition:border-color 0.25s,background 0.25s;
+  width:100%;
+  appearance:none;
+  -webkit-appearance:none;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{
+  border-color:var(--gold);
+  background:rgba(212,168,67,0.06);
+}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(240,237,232,0.2)}
+
+.form-select{
+  cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23D4A843' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 1rem center;
+  padding-right:2.5rem;
+}
+.form-select option{background:#0e0e0e;color:var(--text)}
+
+.form-textarea{
+  resize:vertical;
+  min-height:110px;
+}
+
+.form-error{
+  font-size:0.75rem;
+  color:#e87070;
+  display:none;
+  margin-top:0.2rem;
+}
+.form-group.error .form-error{display:block}
+.form-group.error .form-input,
+.form-group.error .form-select,
+.form-group.error .form-textarea{border-color:#e87070}
+
+.form-success{
+  display:none;
+  background:rgba(212,168,67,0.08);
+  border:1px solid rgba(212,168,67,0.3);
+  padding:1.2rem 1.4rem;
+  font-size:0.92rem;
+  color:var(--gold);
+}
+
+/* ── FOOTER ── */
+footer{
+  background:#050505;
+  border-top:1px solid var(--gold-border);
+  padding:5rem 4rem 2.5rem;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:4rem;
+  margin-bottom:4rem;
+}
+
+.footer-brand-name{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.4rem;
+  color:var(--gold);
+  margin-bottom:0.9rem;
+  display:block;
+}
+.footer-tagline{
+  font-size:0.87rem;
+  color:var(--text-muted);
+  line-height:1.7;
+  max-width:260px;
+  margin-bottom:1.6rem;
+}
+
+.footer-socials{
+  display:flex;
+  gap:0.8rem;
+}
+.social-icon{
+  width:36px;height:36px;
+  border:1px solid var(--gold-border);
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.25s,border-color 0.25s;
+  text-decoration:none;
+}
+.social-icon:hover{background:rgba(212,168,67,0.12);border-color:rgba(212,168,67,0.4)}
+.social-icon svg{fill:var(--gold);width:15px;height:15px}
+
+.footer-col h5{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:0.95rem;
+  color:var(--text);
+  margin-bottom:1.2rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.65rem}
+.footer-col ul li a{
+  font-size:0.85rem;
+  color:var(--text-muted);
+  text-decoration:none;
+  transition:color 0.2s;
+  letter-spacing:0.02em;
+}
+.footer-col ul li a:hover{color:var(--gold)}
+
+.footer-bottom{
+  border-top:1px solid var(--gold-border);
+  padding-top:2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+.footer-copy{
+  font-size:0.78rem;
+  color:var(--text-muted);
+  letter-spacing:0.03em;
+}
+.footer-legal{
+  display:flex;gap:1.2rem;
+}
+.footer-legal a{
+  font-size:0.78rem;
+  color:var(--text-muted);
+  text-decoration:none;
+  transition:color 0.2s;
+}
+.footer-legal a:hover{color:var(--gold)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  nav{padding:1.2rem 2.5rem}
+  #hero{padding:8rem 2.5rem 5rem}
+  .hero-visual{right:3rem}
+  .hero-logo-svg{width:260px;height:260px}
+  .hero-bottom{left:2.5rem;right:2.5rem}
+  #stats{padding:4rem 2.5rem}
+  #chi-siamo,#struttura,#servizi,#processo,#per-chi,#testimonianze,#faq,#contatti{padding:5rem 2.5rem}
+  .chi-inner{gap:3.5rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  footer{padding:4rem 2.5rem 2rem}
+}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  #hero{padding:7rem 2rem 10rem;flex-direction:column}
+  .hero-visual{
+    position:relative;
+    right:auto;top:auto;
+    transform:none;
+    display:flex;justify-content:center;
+    margin-top:2rem;
+    animation:none;
+    opacity:1;
+  }
+  .hero-logo-svg{width:200px;height:200px}
+  .hero-bottom{left:2rem;right:2rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-item:nth-child(3){border-right:1px solid var(--gold-border)}
+  .stat-item:nth-child(3),.stat-item:nth-child(4){border-top:1px solid var(--gold-border)}
+  .chi-inner{grid-template-columns:1fr}
+  .chi-stats-bar{grid-column:1}
+  .reparti-grid{grid-template-columns:repeat(2,1fr)}
+  .reparto-card:nth-child(2n){border-right:none}
+  .reparto-card:nth-child(3n){border-right:1px solid var(--gold-border)}
+  .reparto-card:nth-child(5),.reparto-card:nth-child(6){border-bottom:none}
+  .reparto-card:nth-child(3),.reparto-card:nth-child(4){border-bottom:1px solid var(--gold-border)}
+  .servizi-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .step-item:nth-child(2){border-right:none}
+  .step-item:nth-child(3){border-right:1px solid var(--gold-border);border-top:1px solid var(--gold-border)}
+  .step-item:nth-child(4){border-right:none;border-top:1px solid var(--gold-border)}
+  .perchi-featured{flex-direction:column;align-items:flex-start}
+  .perchi-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .contatti-inner{grid-template-columns:1fr;gap:3rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  #struttura,#servizi,#processo,#per-chi,#testimonianze,#faq,#contatti,#chi-siamo,#stats{padding:5rem 2rem}
+}
+
+@media(max-width:700px){
+  nav{padding:1.1rem 1.4rem}
+  #hero{padding:6rem 1.4rem 8rem}
+  .hero-bottom{left:1.4rem;right:1.4rem;flex-direction:column;gap:0.5rem;align-items:flex-start}
+  .stats-grid{grid-template-columns:1fr;border:none;gap:1px}
+  .stat-item{border-right:none;border-bottom:1px solid var(--gold-border);border-left:3px solid transparent;border-image:linear-gradient(to bottom,#D4A843,rgba(212,168,67,0.2)) 1}
+  .reparti-grid{grid-template-columns:1fr}
+  .reparto-card{border-right:none}
+  .reparto-card:nth-child(n){border-right:none;border-bottom:1px solid var(--gold-border)}
+  .reparto-card:nth-child(6){border-bottom:none}
+  .servizi-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .step-item{border-right:none;border-bottom:1px solid var(--gold-border)}
+  .step-item:last-child{border-bottom:none}
+  .step-item:nth-child(n){border-top:none}
+  .perchi-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  #struttura,#servizi,#processo,#per-chi,#testimonianze,#faq,#contatti,#chi-siamo{padding:4rem 1.4rem}
+  #stats{padding:3rem 1.4rem}
+  footer{padding:3.5rem 1.4rem 2rem}
+}
+
+@media(max-width:480px){
+  .hero-title{font-size:2.8rem}
+  .display-title{font-size:2.2rem}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas a{justify-content:center;text-align:center}
+  .chi-stats-bar{flex-direction:column}
+  .chi-stat{border-right:none;border-bottom:1px solid var(--gold-border);padding:1.2rem 0}
+  .chi-stat:last-child{border-bottom:none}
+  .perchi-featured{padding:2rem 1.4rem}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Apex Agency</a>
+  <ul class="nav-links">
+    <li><a href="#chi-siamo">Chi Siamo</a></li>
+    <li><a href="#struttura">Il Team</a></li>
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#processo">Come Lavoriamo</a></li>
+    <li><a href="#per-chi">Clienti</a></li>
+    <li><a href="#contatti" class="nav-cta">Contatti</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#chi-siamo" class="mob-link">Chi Siamo</a>
+  <a href="#struttura" class="mob-link">Il Team</a>
+  <a href="#servizi" class="mob-link">Servizi</a>
+  <a href="#processo" class="mob-link">Come Lavoriamo</a>
+  <a href="#per-chi" class="mob-link">Clienti</a>
+  <a href="#contatti" class="mob-link">Contatti</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <div class="deco-line" style="animation:slideIn 0.8s ease 0.2s both"></div>
+    <h1 class="hero-title" style="animation:fadeUp 0.9s ease 0.3s both">
+      Il vertice<br>si <em>conquista.</em>
+    </h1>
+    <p class="hero-sub" style="animation:fadeUp 0.9s ease 0.5s both">
+      Influencer Marketing e Creator Management per brand che puntano in alto. Strategia, creator selezionati, risultati che parlano — niente scorciatoie, solo eccellenza.
+    </p>
+    <div class="hero-ctas" style="animation:fadeUp 0.9s ease 0.65s both">
+      <a href="#contatti" class="btn-gold">Inizia ora <span class="arrow">→</span></a>
+      <a href="#servizi" class="btn-ghost">Scopri i servizi</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <svg class="hero-logo-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#D4A843" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#D4A843" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#D4A843"/>
+          <stop offset="50%" stop-color="#f0c84a"/>
+          <stop offset="100%" stop-color="rgba(212,168,67,0.4)"/>
+        </linearGradient>
+      </defs>
+      <!-- Glow bg -->
+      <circle cx="160" cy="160" r="155" fill="url(#glowGrad)"/>
+      <!-- Outer ring -->
+      <circle cx="160" cy="160" r="148" fill="none" stroke="url(#ringGrad)" stroke-width="1.5" opacity="0.5"/>
+      <!-- Main ring -->
+      <circle cx="160" cy="160" r="136" fill="none" stroke="url(#ringGrad)" stroke-width="2.5"/>
+      <!-- Inner ring -->
+      <circle cx="160" cy="160" r="118" fill="none" stroke="rgba(212,168,67,0.2)" stroke-width="1"/>
+      <!-- Corner dots -->
+      <rect x="155.5" y="16" width="9" height="9" fill="#D4A843"/>
+      <rect x="155.5" y="295" width="9" height="9" fill="#D4A843"/>
+      <rect x="16" y="155.5" width="9" height="9" fill="#D4A843"/>
+      <rect x="295" y="155.5" width="9" height="9" fill="#D4A843"/>
+      <!-- AA monogram -->
+      <!-- Left A -->
+      <g transform="translate(160,160)">
+        <text x="-38" y="22" font-family="Playfair Display,serif" font-weight="900" font-size="72" fill="#D4A843" font-style="italic" text-anchor="middle">AA</text>
+      </g>
+      <!-- Deco lines inside -->
+      <line x1="108" y1="192" x2="212" y2="192" stroke="rgba(212,168,67,0.35)" stroke-width="1.5"/>
+      <line x1="124" y1="200" x2="196" y2="200" stroke="rgba(212,168,67,0.18)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="hero-bottom">
+    <span class="hero-domain">apexx-agency.com</span>
+    <span class="hero-year">Dal 2018</span>
+  </div>
+</section>
+
+<style>
+@keyframes slideIn{from{width:0;opacity:0}to{width:80px;opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-glow"></div>
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="8" data-suffix="+">0</div>
+      <div class="stat-label">anni di esperienza nel settore</div>
+    </div>
+    <div class="stat-item reveal reveal-d1">
+      <div class="stat-number" data-target="500" data-suffix="+">0</div>
+      <div class="stat-label">campagne gestite con successo</div>
+    </div>
+    <div class="stat-item reveal reveal-d2">
+      <div class="stat-number" data-target="5000" data-suffix="+">0</div>
+      <div class="stat-label">creator nel nostro network</div>
+    </div>
+    <div class="stat-item reveal reveal-d3">
+      <div class="stat-number" data-target="300" data-suffix="+">0</div>
+      <div class="stat-label">clienti soddisfatti</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+<section id="chi-siamo">
+  <div class="chi-glow"></div>
+  <div class="chi-inner">
+    <div class="chi-text">
+      <div class="deco-line reveal"></div>
+      <p class="eyebrow reveal reveal-d1">Chi Siamo</p>
+      <h2 class="display-title reveal reveal-d2">L'eccellenza non è un caso.<br><em>È un metodo.</em></h2>
+      <p class="reveal reveal-d3">Apex Agency è una struttura con oltre 30 professionisti organizzati in sei reparti dedicati. Dal 2018 gestiamo campagne di influencer marketing con precisione e visione a lungo termine. Ogni cliente ha un team dedicato. Ogni campagna ha un responsabile. La qualità non si delega.</p>
+    </div>
+
+    <div class="chi-values">
+      <div class="value-item reveal reveal-d1">
+        <div class="value-line"></div>
+        <div class="value-content">
+          <h4>Team dedicato per ogni cliente</h4>
+          <p>Account manager, strategist e creative director assegnati dal primo giorno alla fine del progetto.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-d2">
+        <div class="value-line"></div>
+        <div class="value-content">
+          <h4>5.000+ creator nel network</h4>
+          <p>Selezionati con criteri professionali. Qualità prima di tutto, sempre.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chi-stats-bar">
+      <div class="chi-stat reveal">
+        <span class="chi-stat-num">30+</span>
+        <span class="chi-stat-label">Professionisti</span>
+      </div>
+      <div class="chi-stat reveal reveal-d1">
+        <span class="chi-stat-num">6</span>
+        <span class="chi-stat-label">Reparti</span>
+      </div>
+      <div class="chi-stat reveal reveal-d2">
+        <span class="chi-stat-num">2018</span>
+        <span class="chi-stat-label">Fondazione</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUTTURA -->
+<section id="struttura">
+  <div class="struttura-header">
+    <p class="eyebrow reveal">La Struttura</p>
+    <h2 class="display-title reveal reveal-d1">Sei reparti.<br><em>Una visione.</em></h2>
+    <p class="section-sub reveal reveal-d2">Ogni reparto ha un responsabile senior e processi definiti.</p>
+  </div>
+
+  <div class="reparti-grid">
+    <div class="reparto-card reveal">
+      <div class="reparto-dot"></div>
+      <div class="reparto-label">Strategy & Analytics</div>
+      <div class="reparto-num">01 — Strategy</div>
+      <h3 class="reparto-title">Strategy</h3>
+      <p class="reparto-desc">Pianificazione campagne, KPI e reportistica avanzata.</p>
+    </div>
+    <div class="reparto-card reveal reveal-d1">
+      <div class="reparto-dot"></div>
+      <div class="reparto-label">Talent Management</div>
+      <div class="reparto-num">02 — Talent</div>
+      <h3 class="reparto-title">Talent</h3>
+      <p class="reparto-desc">Scouting, selezione e gestione di 5.000+ creator.</p>
+    </div>
+    <div class="reparto-card reveal reveal-d2">
+      <div class="reparto-dot"></div>
+      <div class="reparto-label">Content & Creative</div>
+      <div class="reparto-num">03 — Creative</div>
+      <h3 class="reparto-title">Creative</h3>
+      <p class="reparto-desc">Brief creativi, direzione visiva, copy e supervisione.</p>
+    </div>
+    <div class="reparto-card reveal reveal-d1">
+      <div class="reparto-dot"></div>
+      <div class="reparto-label">Social Media Mgmt</div>
+      <div class="reparto-num">04 — Social</div>
+      <h3 class="reparto-title">Social</h3>
+      <p class="reparto-desc">Gestione profili, calendario editoriale, community.</p>
+    </div>
+    <div class="reparto-card reveal reveal-d2">
+      <div class="reparto-dot"></div>
+      <div class="reparto-label">Brand Partnerships</div>
+      <div class="reparto-num">05 — Partnerships</div>
+      <h3 class="reparto-title">Partnerships</h3>
+      <p class="reparto-desc">Negoziazione contratti, account management.</p>
+    </div>
+    <div class="reparto-card reveal reveal-d3">
+      <div class="reparto-dot"></div>
+      <div class="reparto-label">Local & Retail</div>
+      <div class="reparto-num">06 — Local</div>
+      <h3 class="reparto-title">Local</h3>
+      <p class="reparto-desc">Creator geo-localizzati. Risultati in 30 giorni.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section id="servizi">
+  <div class="servizi-glow"></div>
+  <div class="servizi-header">
+    <p class="eyebrow reveal">Cosa Facciamo</p>
+    <h2 class="display-title reveal reveal-d1">Sei servizi.<br><em>Un unico standard.</em></h2>
+    <p class="section-sub reveal reveal-d2">Dalla prima strategia al report finale, gestiamo ogni fase con strumenti professionali e un team dedicato al tuo settore.</p>
+  </div>
+
+  <div class="servizi-grid">
+    <div class="servizio-card reveal">
+      <span class="servizio-arrow">↗</span>
+      <h3 class="servizio-title">Influencer Marketing & Campagne Sponsorizzate</h3>
+      <p class="servizio-desc">Progettiamo e gestiamo campagne end-to-end su Instagram. Brief creativo, selezione creator, delivery content, monitoraggio KPI in tempo reale.</p>
+    </div>
+    <div class="servizio-card reveal reveal-d1">
+      <span class="servizio-arrow">↗</span>
+      <h3 class="servizio-title">Talent Scouting & Gestione Creator</h3>
+      <p class="servizio-desc">Identifichiamo creator emergenti prima che diventino mainstream. Gestiamo crescita, contratti e collaborazioni con approccio da talent agency professionale.</p>
+    </div>
+    <div class="servizio-card reveal reveal-d2">
+      <span class="servizio-arrow">↗</span>
+      <h3 class="servizio-title">Brand Strategy Aziendale</h3>
+      <p class="servizio-desc">Consulenza strategica per definire posizionamento, tone of voice e piano di crescita digitale del brand.</p>
+    </div>
+    <div class="servizio-card reveal reveal-d1">
+      <span class="servizio-arrow">↗</span>
+      <h3 class="servizio-title">Crescita per Attività Locali</h3>
+      <p class="servizio-desc">Portiamo creator locali e micro-influencer a promuovere ristoranti, negozi, centri estetici. Risultati visibili in 30 giorni.</p>
+    </div>
+    <div class="servizio-card reveal reveal-d2">
+      <span class="servizio-arrow">↗</span>
+      <h3 class="servizio-title">E-commerce & Startup Scaling</h3>
+      <p class="servizio-desc">Campagne ad alto impatto per e-commerce che vogliono acquisire clienti velocemente. UGC, seeding prodotto e creator affiliate pensati per scalare.</p>
+    </div>
+    <div class="servizio-card reveal reveal-d3">
+      <span class="servizio-arrow">↗</span>
+      <h3 class="servizio-title">Content Strategy & Instagram Management</h3>
+      <p class="servizio-desc">Pianificazione editoriale, calendari contenuti, caption copy e gestione completa del profilo Instagram.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section id="processo">
+  <div class="processo-header">
+    <p class="eyebrow reveal">Il Processo</p>
+    <h2 class="display-title reveal reveal-d1">Precisione<br><em>assoluta.</em></h2>
+    <p class="section-sub reveal reveal-d2">Quattro fasi. Ogni volta.</p>
+  </div>
+
+  <div class="steps-grid">
+    <div class="step-item reveal">
+      <span class="step-arrow">↗</span>
+      <div class="step-number">01</div>
+      <h3 class="step-title">Analisi & Strategia</h3>
+      <p class="step-desc">Brand, mercato, concorrenza. Piano d'azione prima di qualsiasi mossa.</p>
+    </div>
+    <div class="step-item reveal reveal-d1">
+      <span class="step-arrow">↗</span>
+      <div class="step-number">02</div>
+      <h3 class="step-title">Selezione Creator</h3>
+      <p class="step-desc">Affinità, audience, stile. Nessuna scelta casuale, nessun compromesso.</p>
+    </div>
+    <div class="step-item reveal reveal-d2">
+      <span class="step-arrow">↗</span>
+      <div class="step-number">03</div>
+      <h3 class="step-title">Lancio Campagna</h3>
+      <p class="step-desc">Brief, approvazione contenuti e monitoraggio in tempo reale.</p>
+    </div>
+    <div class="step-item reveal reveal-d3">
+      <span class="step-arrow">↗</span>
+      <div class="step-number">04</div>
+      <h3 class="step-title">Report & Ottimizzazione</h3>
+      <p class="step-desc">Metriche, insights e raccomandazioni per le campagne future.</p>
+    </div>
+  </div>
+
+  <div class="processo-footer reveal">
+    <span><em>500+</em> campagne completate</span>
+  </div>
+</section>
+
+<!-- PER CHI -->
+<section id="per-chi">
+  <div class="perchi-header">
+    <p class="eyebrow reveal">Per Chi</p>
+    <h2 class="display-title reveal reveal-d1">Per chi<br><em>lavoriamo.</em></h2>
+  </div>
+
+  <div class="perchi-featured reveal">
+    <div class="perchi-featured-left">
+      <h3>Aziende & Brand</h3>
+      <p>Campagne precise, misurabili e allineate alla brand identity. Per chi vuole risultati, non solo reach.</p>
+    </div>
+    <div class="perchi-featured-badge">Partner Premium</div>
+  </div>
+
+  <div class="perchi-grid">
+    <div class="perchi-card reveal reveal-d1">
+      <h4>Influencer & Creator</h4>
+      <p>Collaborazioni di qualità per crescere verso il livello successivo.</p>
+    </div>
+    <div class="perchi-card reveal reveal-d2">
+      <h4>Attività Locali</h4>
+      <p>Creator locali che portano clienti reali, non solo like.</p>
+    </div>
+    <div class="perchi-card reveal reveal-d3">
+      <h4>E-commerce</h4>
+      <p>UGC e affiliate pensati per convertire e scalare.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIANZE -->
+<section id="testimonianze">
+  <div class="testi-header">
+    <p class="eyebrow reveal">Testimonianze</p>
+    <h2 class="display-title reveal reveal-d1">Quello che dicono<br><em>i nostri clienti.</em></h2>
+  </div>
+
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">Apex Agency ha trasformato la nostra presenza su Instagram in meno di tre mesi. Professionali, precisi e con una visione che va ben oltre la campagna singola. Il team dedicato ha fatto la differenza fin dal primo giorno.</p>
+      <div class="testi-author">
+        <div class="testi-name">Giulia Ferrante</div>
+        <div class="testi-role">Brand Director — Maison Ferrante Milano, Luxury Fashion</div>
+      </div>
+    </div>
+    <div class="testi-card reveal reveal-d1">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">Avevamo già lavorato con altre agenzie, ma nessuna aveva questo livello di struttura e attenzione ai dettagli. Con Apex Agency ogni campagna è stata seguita con una precisione che non avevo mai visto nel settore.</p>
+      <div class="testi-author">
+        <div class="testi-name">Marco Esposito</div>
+        <div class="testi-role">CEO — Gusto Autentico, E-commerce Gourmet</div>
+      </div>
+    </div>
+    <div class="testi-card reveal reveal-d2">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">Cercavamo creator autentici per promuovere la nostra struttura e il risultato ha superato ogni aspettativa. Il reparto Local di Apex ha selezionato profili perfettamente allineati alla nostra identità. Risultati concreti in 30 giorni.</p>
+      <div class="testi-author">
+        <div class="testi-name">Chiara Romano</div>
+        <div class="testi-role">General Manager — Villa Eterea, Boutique Hotel Costiera</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-header">
+    <p class="eyebrow reveal">FAQ</p>
+    <h2 class="display-title reveal reveal-d1">Domande<br><em>frequenti.</em></h2>
+  </div>
+
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-trigger">
+        <span class="faq-question">Quanto dura mediamente una campagna?</span>
+        <span class="faq-icon"><span class="faq-icon-bar"></span></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Una campagna standard dura tra le 2 e le 6 settimane. Le campagne awareness si concentrano in 2–3 settimane con più creator in parallelo. Le campagne di brand authority si costruiscono in 3–6 mesi con creator fissi e contenuti ricorrenti.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">
+        <span class="faq-question">Con quale tipo di creator lavorate?</span>
+        <span class="faq-icon"><span class="faq-icon-bar"></span></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Gestiamo creator da 5.000 a oltre 500.000 follower. Il criterio principale è l'engagement rate reale, l'affinità con il brand e la qualità del pubblico.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">
+        <span class="faq-question">Come misurate i risultati di una campagna?</span>
+        <span class="faq-icon"><span class="faq-icon-bar"></span></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Forniamo report completi: reach, impression, engagement rate, link click, conversioni con UTM o pixel, confronto con benchmark di settore. Ogni report include raccomandazioni strategiche.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">
+        <span class="faq-question">Lavorate anche fuori dalla Campania?</span>
+        <span class="faq-icon"><span class="faq-icon-bar"></span></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Sì. Abbiamo creator e clienti in tutta Italia. Per le attività locali identifichiamo creator geo-localizzati nella città o regione di interesse.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">
+        <span class="faq-question">Posso lavorare con Apex Agency se sono un creator emergente?</span>
+        <span class="faq-icon"><span class="faq-icon-bar"></span></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Assolutamente sì. Identifichiamo creator con alto potenziale prima che esplodano. Se hai un profilo autentico e un'audience coinvolta, siamo interessati.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger">
+        <span class="faq-question">Qual è il budget minimo per iniziare?</span>
+        <span class="faq-icon"><span class="faq-icon-bar"></span></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Non esiste un budget standard. In fase di primo contatto facciamo una consulenza gratuita per proporre un piano personalizzato.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti">
+  <div class="contatti-glow"></div>
+  <div class="contatti-inner">
+    <div class="contatti-left">
+      <div class="deco-line reveal"></div>
+      <p class="eyebrow reveal reveal-d1">Contattaci</p>
+      <h2 class="display-title reveal reveal-d2">Parliamo<br>del tuo<br><em>progetto.</em></h2>
+      <p class="section-sub reveal reveal-d3">Consulenza gratuita, senza impegno. Brand, creator, attività locale o e-commerce — troviamo la strategia giusta insieme.</p>
+
+      <div class="contatti-info reveal reveal-d3">
+        <p class="contatti-detail">Email: <a href="mailto:info@apexx-agency.com">info@apexx-agency.com</a></p>
+        <p class="contatti-detail">Sede: Napoli, Italia</p>
+      </div>
+
+      <div class="contatti-cta-wrap reveal reveal-d4">
+        <a href="mailto:info@apexx-agency.com" class="btn-gold">Inizia ora — Link in bio <span class="arrow">→</span></a>
+        <p class="contatti-cta-sub">oppure scrivi a <a href="mailto:info@apexx-agency.com">info@apexx-agency.com</a></p>
+      </div>
+    </div>
+
+    <div class="contatti-right reveal reveal-d2">
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group" id="fg-nome">
+            <label class="form-label">Nome *</label>
+            <input class="form-input" type="text" name="nome" placeholder="Il tuo nome"/>
+            <span class="form-error">Campo obbligatorio</span>
+          </div>
+          <div class="form-group" id="fg-cognome">
+            <label class="form-label">Cognome</label>
+            <input class="form-input" type="text" name="cognome" placeholder="Il tuo cognome"/>
+          </div>
+        </div>
+        <div class="form-group" id="fg-email">
+          <label class="form-label">Email *</label>
+          <input class="form-input" type="email" name="email" placeholder="tua@email.com"/>
+          <span class="form-error">Inserisci un'email valida</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tipo di collaborazione</label>
+          <select class="form-select" name="tipo">
+            <option value="" disabled selected>Seleziona...</option>
+            <option>Campagna Influencer Marketing</option>
+            <option>Talent Scouting</option>
+            <option>Brand Strategy</option>
+            <option>Attività Locale</option>
+            <option>E-commerce</option>
+            <option>Content & Instagram Management</option>
+            <option>Altro</option>
+          </select>
+        </div>
+        <div class="form-group" id="fg-messaggio">
+          <label class="form-label">Messaggio *</label>
+          <textarea class="form-textarea" name="messaggio" placeholder="Raccontaci il tuo progetto..."></textarea>
+          <span class="form-error">Campo obbligatorio</span>
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center">
+          Invia messaggio <span class="arrow">→</span>
+        </button>
+        <div class="form-success" id="form-success">
+          Messaggio inviato. Ti risponderemo entro 24 ore lavorative.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="footer-brand-name">Apex Agency</span>
+      <p class="footer-tagline">L'agenzia premium per chi punta al vertice. 30+ professionisti, 6 reparti dedicati, dal 2018.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.28 6.28 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.84 4.84 0 01-1.01-.05z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Servizi</h5>
+      <ul>
+        <li><a href="#servizi">Influencer Marketing</a></li>
+        <li><a href="#servizi">Talent Scouting</a></li>
+        <li><a href="#servizi">Brand Strategy</a></li>
+        <li><a href="#servizi">Attività Locali</a></li>
+        <li><a href="#servizi">E-commerce Scaling</a></li>
+        <li><a href="#servizi">Content & Instagram</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Agenzia</h5>
+      <ul>
+        <li><a href="#chi-siamo">Chi Siamo</a></li>
+        <li><a href="#struttura">Il Team</a></li>
+        <li><a href="#processo">Come Lavoriamo</a></li>
+        <li><a href="#per-chi">Per Chi</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contatti</h5>
+      <ul>
+        <li><a href="mailto:info@apexx-agency.com">info@apexx-agency.com</a></li>
+        <li><a href="#contatti">Napoli, Italia</a></li>
+        <li><a href="#contatti">Lavora con noi</a></li>
+        <li><a href="#contatti">Diventa creator</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Apex Agency S.r.l. — P.IVA 00000000000</span>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── NAVBAR SCROLL ──
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive:true});
+
+// ── HAMBURGER ──
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// ── REVEAL ON SCROLL ──
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0});
+revealEls.forEach(el => revealObserver.observe(el));
+
+// ── COUNTER ANIMATION ──
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-target'));
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 1600;
+  const start = performance.now();
+  const update = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.floor(eased * target);
+    el.textContent = (target >= 1000 ? value.toLocaleString('it-IT') : value) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.3});
+document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+// ── FAQ ACCORDION ──
+document.querySelectorAll('.faq-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const item = trigger.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+
+    // Toggle clicked
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+
+// ── FORM VALIDATION ──
+const form = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+
+function validate(name, value) {
+  if (name === 'nome' || name === 'messaggio') return value.trim().length > 0;
+  if (name === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+  return true;
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let valid = true;
+  const fields = [
+    {id: 'fg-nome', name: 'nome'},
+    {id: 'fg-email', name: 'email'},
+    {id: 'fg-messaggio', name: 'messaggio'},
+  ];
+
+  fields.forEach(f => {
+    const group = document.getElementById(f.id);
+    const input = group.querySelector('input, textarea');
+    if (!validate(f.name, input.value)) {
+      group.classList.add('error');
+      valid = false;
+    } else {
+      group.classList.remove('error');
+    }
+  });
+
+  if (valid) {
+    form.style.display = 'none';
+    formSuccess.style.display = 'block';
+  }
+});
+
+// Live validation
+form.querySelectorAll('input, textarea').forEach(input => {
+  input.addEventListener('input', () => {
+    const group = input.closest('.form-group');
+    if (group && group.id) {
+      const name = input.getAttribute('name');
+      if (validate(name, input.value)) group.classList.remove('error');
+    }
+  });
+});
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+});
+</script>
+</body>
+</html>
